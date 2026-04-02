@@ -5,73 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>B Priyankaa | Portfolio</title>
 
-<!-- GOOGLE FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* SMOOTH SCROLL */
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: 'Poppins', sans-serif;
     background: #0f172a;
     color: #e2e8f0;
-    line-height: 1.6;
 }
 
-/* HERO */
-header {
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #1e293b, #020617);
-}
-
-header h1 {
-    font-size: 2.8rem;
-}
-
-header h3 {
-    color: #38bdf8;
-    margin: 10px 0;
-}
-
-header p {
-    max-width: 700px;
-    margin: auto;
-    opacity: 0.8;
-}
-
-/* SECTIONS */
-section {
-    padding: 60px 10%;
-}
-
-/* FADE ANIMATION */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-in-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+section { padding: 70px 10%; }
 
 h2 {
-    color: #38bdf8;
+    color: #3b82f6;
     margin-bottom: 20px;
 }
 
-/* CARD */
 .card {
     background: #1e293b;
     padding: 20px;
@@ -80,212 +30,392 @@ h2 {
     transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    background: #334155;
+.card:hover { transform: translateY(-5px); }
+
+.icon {
+    margin-right: 10px;
+    color: #3b82f6;
 }
 
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-/* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-/* LINKS */
-a {
-    color: #38bdf8;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* FOOTER */
-footer {
+.hero {
     text-align: center;
-    padding: 20px;
-    background: #020617;
-    margin-top: 40px;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.hero h1 { font-size: 3rem; }
+
+.hero h2 { color: #3b82f6; }
+
+a { color: #3b82f6; }
+
+/* CHATBOT */
+#chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+#chat-header {
+    background: #3b82f6;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+#chat-body {
+    height: 250px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+#chat-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.user { color: #38bdf8; }
+.bot { color: #e2e8f0; }
+.skills-list {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skills-list span {
+    background: #0f172a;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    border: 1px solid #3b82f6;
 }
 </style>
-
 </head>
 
 <body>
 
-<header class="fade-in">
+<!-- HERO -->
+<header class="hero">
     <h1>B Priyankaa</h1>
-    <h3>Data Scientist II | ML, PySpark & GenAI | FIS | Guest Speaker</h3>
+    <h2>Data Scientist II | ML, PySpark & GenAI | FIS | Guest Speaker</h2>
     <p>Designing production-grade ML pipelines and LLM-driven solutions for high-scale enterprise ecosystems.</p>
 </header>
 
-<section class="fade-in">
-    <h2>About Me</h2>
+<!-- SUMMARY -->
+<section>
+    <h2><i class="fa-solid fa-user icon"></i>Summary</h2>
     <div class="card">
-        <p>
         Data Scientist with 3+ years of experience building and deploying machine learning and data-driven solutions in the financial domain. 
 		Experienced in working across the full data lifecycle — from data processing using PySpark and SQL to developing ML models and exploring GenAI use cases using LLMs. 
 		I strongly focus on scalable data pipelines, feature engineering & model development, synthetic data generation, and LLM-based solutions (prompt engineering, RAG). 
-		Want to know more on this Techie's Work? Scroll Down, lets catch up there!
-        </p>
+		Want to know more on this Techie's Work? Chat with my AI Assistant.
     </div>
 </section>
 
-<section class="fade-in">
-    <h2>Experience</h2>
+<!-- EXPERIENCE -->
+<section>
+<h2><i class="fa-solid fa-briefcase icon"></i>Experience</h2>
 
-    <div class="card">
-        <h3>Data Scientist II – FIS</h3>
-        <ul>
-            <li>Built fraud detection models on 2+ TB data achieving >90% accuracy</li>
-            <li>Reduced false positives by ~30%</li>
-            <li>Deployed models in on-premise banking systems</li>
-            <li>Automated alert pipelines for fraud detection</li>
-            <li>Developed low-code ML pipelines using ETL workflows</li>
-            <li>Built RAG system handling 100K+ documents</li>
-            <li>Improved LLM accuracy by 30–40%</li>
-            <li>Delivered client-facing AI solutions</li>
-        </ul>
-    </div>
+<div class="card">
+<h3>Data Scientist II – FIS</h3>
+<ul>
+<li>Built fraud detection models on 2+ TB data (Achieved >90% accuracy)</li>
+<li>Reduced false positives by 30%</li>
+<li>Deployed ML models in banking infrastructure</li>
+<li>Automated alert generation workflows integrated with case management systems, accelerating fraud analysis and reducing manual intervention.</li>
+<li>Built RAG based Q&A system handling 100K+ documents enabling AI agents for enterprise clients to query and retrieve insights.</li>
+<li>Delivered client-facing demos and solution walkthroughs, translating business requirements into custom ML/AI use cases and driving stakeholder adoption.</li>
+</ul>
+</div>
 
-    <div class="card">
-        <h3>Associate Content Reviewer – Skill-Lync</h3>
-        <ul>
-            <li>Reviewed 15+ technical modules</li>
-            <li>Improved content efficiency by ~20%</li>
-            <li>Collaborated with domain experts</li>
-        </ul>
-    </div>
+<div class="card">
+<h3>Associate Content Reviewer – Skill-Lync</h3>
+<ul>
+<li>Reviewed and validated technical course content across 15+ modules, ensuring alignment with industry standards and technical accuracy.</li>
+<li>Provided technical guidance to course development teams, improving content quality and reducing revision cycles by ~20%.</li>
+<li>Collaborated with 5+ domain experts and industry professionals to refine course materials and ensure relevance to real-world applications.</li>
+<li>Prepared and documented technical specifications and review feedback, streamlining content development and improving delivery timelines.</li>
+</ul>
+</div>
 
 </section>
 
-<section class="fade-in">
-    <h2>Skills</h2>
-    <div class="grid">
-
-        <div class="card">
-            <h4>Machine Learning</h4>
-            <p>Supervised, Unsupervised, Feature Engineering, ROC-AUC, Precision, Recall, F1 Score</p>
-        </div>
-
-        <div class="card">
-            <h4>Generative AI</h4>
-            <p>RAG, LLMs (Qwen, GPT, LLaMA), LangChain, Vector DB, LoRA, AI Agents</p>
-        </div>
-
-        <div class="card">
-            <h4>Data Engineering</h4>
-            <p>Python, SQL, PySpark, Pandas, Hadoop, NLP</p>
-        </div>
-
-        <div class="card">
-            <h4>Statistics</h4>
-            <p>EDA, Hypothesis Testing, ARIMA, MAE</p>
-        </div>
-
-        <div class="card">
-            <h4>MLOps</h4>
-            <p>Docker, AWS, Deployment, Pipelines</p>
-        </div>
-
+<!-- SKILLS -->
+<section>
+<h2><i class="fa-solid fa-code icon"></i>Skills</h2>
+<div class="grid">
+<div class="card">
+	<h4>Programming & Data Engineering</h4>
+    <div class="skills-list">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Pandas</span>
+        <span>NumPy</span>
+        <span>PySpark</span>
+        <span>Linux</span>
+        <span>ETL Pipelines</span>
+        <span>Big Data Processing</span>
+        <span>Scikit-Learn</span>
+        <span>TensorFlow</span>
+        <span>PyTorch</span>
+        <span>MySQL</span>
+        <span>Spark</span>
+        <span>Hadoop</span>
+        <span>NLP</span>
     </div>
+</div>
+<div class="card">
+<h4>Machine Learning & AI</h4>
+    <div class="skills-list">
+        <span>Supervised Learning</span>
+        <span>Unsupervised Learning</span>
+        <span>Classification</span>
+        <span>Regression</span>
+        <span>Anomaly Detection</span>
+        <span>Feature Engineering</span>
+        <span>ROC-AUC</span>
+        <span>Precision</span>
+        <span>Recall</span>
+        <span>F1 Score</span>
+        <span>Predictive Modeling</span>
+        <span>Hyperparameter Tuning</span>
+    </div>
+</div>
+<div class="card">
+<h4>Statistics & Analytics</h4>
+    <div class="skills-list">
+        <span>EDA</span>
+        <span>Statistical Analysis</span>
+        <span>Hypothesis Testing</span>
+        <span>Probability Distributions</span>
+        <span>ARIMA</span>
+        <span>MAE</span>
+    </div>
+</div>
+<div class="card">
+<h4>Computer Vision</h4>
+    <div class="skills-list">
+        <span>Image Processing</span>
+        <span>Feature Extraction</span>
+        <span>Deep Learning</span>
+        <span>Image Classification</span>
+        <span>Object Localization</span>
+    </div>
+</div>
+<div class="card">
+<h4>Generative AI and LLMs</h4>
+    <div class="skills-list">
+         <span>RAG</span>
+        <span>Prompt Engineering</span>
+        <span>Embeddings</span>
+        <span>Vector DB</span>
+        <span>LangChain</span>
+        <span>LangGraph</span>
+        <span>Hugging Face</span>
+        <span>Qwen</span>
+        <span>GPT</span>
+        <span>LLaMA</span>
+        <span>Mistral</span>
+        <span>LoRA</span>
+        <span>Multi-Modal AI</span>
+        <span>CrewAI</span>
+        <span>AutoGen</span>
+        <span>MCP</span>
+    </div>
+</div>
+<div class="card">
+    <h4>MLOps & Deployment</h4>
+    <div class="skills-list">
+        <span>Model Deployment</span>
+        <span>On-Prem Deployment</span>
+        <span>Model Inference</span>
+        <span>Performance Optimization</span>
+        <span>Pipeline Automation</span>
+        <span>Docker</span>
+        <span>AWS</span>
+        <span>Git</span>
+    </div>
+</div>
+<!-- Tools -->
+<div class="card">
+    <h4>Tools & Platforms</h4>
+    <div class="skills-list">
+        <span>Jupyter Notebook</span>
+        <span>VS Code</span>
+    </div>
+</div>
+
+<!-- Soft Skills -->
+<div class="card">
+    <h4>Soft Skills</h4>
+    <div class="skills-list">
+        <span>Communication</span>
+        <span>Problem Solving</span>
+        <span>Collaboration</span>
+        <span>Analytical Thinking</span>
+        <span>Adaptability</span>
+    </div>
+</div>
+</div>
 </section>
 
-<section class="fade-in">
-    <h2>Projects</h2>
-    <div class="grid">
+<!-- PROJECTS -->
+<section>
+<h2><i class="fa-solid fa-diagram-project icon"></i>Projects</h2>
 
-        <div class="card">
-            <h3>Fraud Detection System</h3>
-            <ul>
-                <li>Processed 2+ TB transaction data</li>
-                <li>90%+ accuracy</li>
-                <li>Reduced false positives significantly</li>
-                <li>Deployed in banking environment</li>
-            </ul>
-        </div>
+<div class="card">
+<h3>Comprehensive Transaction Analysis & Revenue Forecasting</h3>
+<p>Performed basket-level transaction analysis using PySpark and Pandas on 500K+ transactional records, uncovering customer purchasing patterns and trends.</p>
+<p>Developed a time series forecasting model (ARIMA), tuning (p, d, q) parameters to achieve ~15–20% reduction in MAE, improving prediction accuracy.</p>
+<p>Identified top-performing weekdays contributing to ~25% higher revenue, enabling actionable insights for sales optimization and planning.</p>
+</div>
 
-        <div class="card">
-            <h3>RAG-based AI Assistant</h3>
-            <ul>
-                <li>Qwen LLM + LangChain</li>
-                <li>100K+ documents</li>
-                <li>Improved accuracy by 30–40%</li>
-            </ul>
-        </div>
+<div class="card">
+<h3>Pneumonia Detection using Computer Vision</h3>
+<p>Built a computer vision model to detect pneumonia from 5,000+ chest X-ray (CXR) images (DICOM format) with annotated bounding boxes.</p>
+<p>Preprocessed images to 128×128 resolution, improving model training efficiency and consistency.</p>
+<p>Developed a baseline classification model achieving ~83.5% accuracy, enabling automated pneumonia detection.</p>
+<p>Implemented image preprocessing, feature extraction, and localization techniques, reducing manual diagnostic effort by ~30%.</p>
+</div>
 
-        <div class="card">
-            <h3>Pneumonia Detection</h3>
-            <ul>
-                <li>Computer vision model</li>
-                <li>83.5% accuracy</li>
-                <li>Reduced manual effort by 30%</li>
-            </ul>
-        </div>
+<div class="card">
+<h3>Skin Lesion Classification using ML and Deep Learning</h3>
+<p>Designed and compared machine learning and deep learning models for classifying skin lesions using the ISIC dataset (10K+ images).</p>
+<p>Achieved ~97.3% accuracy with deep learning models, significantly outperforming traditional ML models (~54.2% accuracy).</p>
+<p>Applied image preprocessing, feature extraction, and classification techniques to enhance model performance.</p>
+<p>Developed a desktop application for real-time prediction, improving usability and enabling practical deployment.</p>
+</div>
 
-        <div class="card">
-            <h3>Skin Lesion Classification</h3>
-            <ul>
-                <li>Deep learning model (97.3%)</li>
-                <li>ML vs DL comparison</li>
-                <li>Desktop application</li>
-            </ul>
-        </div>
-
-    </div>
 </section>
 
-<section class="fade-in">
-    <h2>Achievements</h2>
-    <div class="card">
-        <ul>
-            <li>Gold Badge in AI/ML (Great Learning)</li>
-            <li>Guest Speaker – Christ University (2026)</li>
-            <li>1st Rank in University Exams</li>
-            <li>Texas Instruments IICDC Quarterfinalist</li>
-        </ul>
-    </div>
+<!-- EDUCATION -->
+<section>
+<h2><i class="fa-solid fa-graduation-cap icon"></i>Education</h2>
+
+<div class="card">
+<p>Master of Data Science – Deakin University</p>
+<p>PGP AI & ML – UT Austin</p>
+<p>B.E – Electronics & Communication Engineering - Loyola ICAM College of Engineering and Technology</p>
+</div>
+
 </section>
 
-<section class="fade-in">
-    <h2>Contact</h2>
-    <div class="card">
-        <p><a href="https://www.linkedin.com/in/b-priyankaa-066489154/">LinkedIn</a></p>
-        <p><a href="https://github.com/Priyankaa-B98">GitHub</a></p>
-    </div>
+<!-- ACHIEVEMENTS -->
+<section>
+<h2><i class="fa-solid fa-trophy icon"></i>Achievements</h2>
+<div class="card">
+<ul>
+<li>Gold Badge in AI/ML, Great Learning</li>
+<li>Guest Speaker – Christ University, Bangalore</li>
+<li>1st Rank University - Loyola ICAM College of Engineering and Technology</li>
+</ul>
+</div>
 </section>
 
-<footer class="fade-in">
-    <p>© 2026 B Priyankaa</p>
-</footer>
+<!-- PUBLICATIONS -->
+<section>
+<h2><i class="fa-solid fa-book icon"></i>Publications</h2>
+<div class="card">
+<p>Authored and presented a research paper on “Skin Lesion Characterization using Ensemble ML & DL Models” at the International Conference on EMSME 2020 (NIT Delhi).</p>
+<p>Recommended for publication in Springer Lecture Notes in Electrical Engineering (Scopus-indexed)</p>
+</div>
+</section>
 
-<!-- ANIMATION SCRIPT -->
+<!-- CERTIFICATIONS -->
+<section>
+<h2><i class="fa-solid fa-certificate icon"></i>Certifications</h2>
+<div class="card">
+<ul>
+<li>IBM – RAG & Agentic AI</li>
+<li>IBM – Python for Data Science</li>
+<li>KPMG – Data Analytics</li>
+</ul>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section>
+<h2><i class="fa-solid fa-envelope icon"></i>Contact</h2>
+<div class="card">
+<p><a href="mailto:priyankaabaskaran98@gmail.com">Email</a></p>
+<p><a href="https://www.linkedin.com/in/b-priyankaa-066489154/">LinkedIn</a></p>
+<p><a href="https://github.com/Priyankaa-B98">GitHub</a></p>
+</div>
+</section>
+
+<!-- CHATBOT UI -->
+<div id="chatbot">
+    <div id="chat-header">Ask Priyankaa AI 🤖</div>
+    <div id="chat-body"></div>
+    <input id="chat-input" placeholder="Ask about projects, skills..." />
+</div>
+
+<!-- CHATBOT SCRIPT -->
 <script>
-const elements = document.querySelectorAll('.fade-in');
+const input = document.getElementById("chat-input");
+const body = document.getElementById("chat-body");
 
-function revealElements() {
-    elements.forEach(el => {
-        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-            el.classList.add('visible');
-        }
-    });
+// Default welcome message
+addMessage("AI: Hi! Ask me about Priyankaa’s projects, skills, or experience 👋", "bot");
+
+input.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        const userText = input.value;
+        addMessage("You: " + userText, "user");
+        respond(userText.toLowerCase());
+        input.value = "";
+    }
+});
+
+function addMessage(text, type) {
+    const msg = document.createElement("div");
+    msg.className = "message " + type;
+    msg.innerText = text;
+    body.appendChild(msg);
+    body.scrollTop = body.scrollHeight;
 }
 
-// Run on load
-window.addEventListener('load', revealElements);
+function respond(input) {
+    let reply = "I'm Priyankaa's AI assistant. Ask about projects, skills, or experience.";
 
-// Run on scroll
-window.addEventListener('scroll', revealElements);
+    if (input.includes("project") || input.includes("latest")) {
+        reply = "Priyankaa's recent project is 'Comprehensive Transaction Analysis & Revenue Forecasting', where she analyzed 500K+ transactions and improved forecasting accuracy by 20% using ARIMA.";
+    }
+    else if (input.includes("fraud")) {
+        reply = "She built fraud detection models on 2+ TB data with 90%+ accuracy and reduced false positives by 30%.";
+    }
+    else if (input.includes("rag") || input.includes("llm")) {
+        reply = "She developed a RAG-based system handling 100K+ documents using Qwen LLM, improving response accuracy by 40%.";
+    }
+    else if (input.includes("skills")) {
+        reply = "Her expertise includes Machine Learning, PySpark, NLP, Generative AI, and MLOps with enterprise-scale deployments.";
+    }
+    else if (input.includes("experience")) {
+        reply = "She is currently a Data Scientist II at FIS working on real-time ML and AI systems.";
+    }
+
+    addMessage("AI: " + reply, "bot");
+}
+
 </script>
 
 </body>
