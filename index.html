@@ -488,8 +488,8 @@ function respond(input) {
 }
 
 function toggleChat() {
-    const body = document.getElementById("chat-body");
-    const input = document.getElementById("chat-input");
+    const chatInput = document.getElementById("chat-input");
+	const chatBody = document.getElementById("chat-body");
 
     if (body.style.display === "none") {
         body.style.display = "block";
