@@ -491,12 +491,12 @@ function toggleChat() {
     const chatInput = document.getElementById("chat-input");
 	const chatBody = document.getElementById("chat-body");
 
-    if (body.style.display === "none") {
-        body.style.display = "block";
-        input.style.display = "block";
+    if (chatBody.style.display === "none") {
+        chatBody.style.display = "block";
+        chatInput.style.display = "block";
     } else {
-        body.style.display = "none";
-        input.style.display = "none";
+        chatBody.style.display = "none";
+        chatInput.style.display = "none";
     }
 }
 
