@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B Priyankaa | Portfolio</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* SMOOTH SCROLL */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* HERO */
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1e293b, #020617);
+}
+
+header h1 {
+    font-size: 2.8rem;
+}
+
+header h3 {
+    color: #38bdf8;
+    margin: 10px 0;
+}
+
+header p {
+    max-width: 700px;
+    margin: auto;
+    opacity: 0.8;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 10%;
+}
+
+/* FADE ANIMATION */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+/* CARD */
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #334155;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* LINKS */
+a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    margin-top: 40px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header class="fade-in">
+    <h1>B Priyankaa</h1>
+    <h3>Data Scientist II | ML, PySpark & GenAI | FIS | Guest Speaker</h3>
+    <p>Designing production-grade ML pipelines and LLM-driven solutions for high-scale enterprise ecosystems.</p>
+</header>
+
+<section class="fade-in">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+        Data Scientist with 3+ years of experience building and deploying machine learning and data-driven solutions in the financial domain. 
+		Experienced in working across the full data lifecycle — from data processing using PySpark and SQL to developing ML models and exploring GenAI use cases using LLMs. 
+		I strongly focus on scalable data pipelines, feature engineering & model development, synthetic data generation, and LLM-based solutions (prompt engineering, RAG). 
+		Want to know more on this Techie's Work? Scroll Down, lets catch up there!
+        </p>
+    </div>
+</section>
+
+<section class="fade-in">
+    <h2>Experience</h2>
+
+    <div class="card">
+        <h3>Data Scientist II – FIS</h3>
+        <ul>
+            <li>Built fraud detection models on 2+ TB data achieving >90% accuracy</li>
+            <li>Reduced false positives by ~30%</li>
+            <li>Deployed models in on-premise banking systems</li>
+            <li>Automated alert pipelines for fraud detection</li>
+            <li>Developed low-code ML pipelines using ETL workflows</li>
+            <li>Built RAG system handling 100K+ documents</li>
+            <li>Improved LLM accuracy by 30–40%</li>
+            <li>Delivered client-facing AI solutions</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Associate Content Reviewer – Skill-Lync</h3>
+        <ul>
+            <li>Reviewed 15+ technical modules</li>
+            <li>Improved content efficiency by ~20%</li>
+            <li>Collaborated with domain experts</li>
+        </ul>
+    </div>
+
+</section>
+
+<section class="fade-in">
+    <h2>Skills</h2>
+    <div class="grid">
+
+        <div class="card">
+            <h4>Machine Learning</h4>
+            <p>Supervised, Unsupervised, Feature Engineering, ROC-AUC, Precision, Recall, F1 Score</p>
+        </div>
+
+        <div class="card">
+            <h4>Generative AI</h4>
+            <p>RAG, LLMs (Qwen, GPT, LLaMA), LangChain, Vector DB, LoRA, AI Agents</p>
+        </div>
+
+        <div class="card">
+            <h4>Data Engineering</h4>
+            <p>Python, SQL, PySpark, Pandas, Hadoop, NLP</p>
+        </div>
+
+        <div class="card">
+            <h4>Statistics</h4>
+            <p>EDA, Hypothesis Testing, ARIMA, MAE</p>
+        </div>
+
+        <div class="card">
+            <h4>MLOps</h4>
+            <p>Docker, AWS, Deployment, Pipelines</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="fade-in">
+    <h2>Projects</h2>
+    <div class="grid">
+
+        <div class="card">
+            <h3>Fraud Detection System</h3>
+            <ul>
+                <li>Processed 2+ TB transaction data</li>
+                <li>90%+ accuracy</li>
+                <li>Reduced false positives significantly</li>
+                <li>Deployed in banking environment</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>RAG-based AI Assistant</h3>
+            <ul>
+                <li>Qwen LLM + LangChain</li>
+                <li>100K+ documents</li>
+                <li>Improved accuracy by 30–40%</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Pneumonia Detection</h3>
+            <ul>
+                <li>Computer vision model</li>
+                <li>83.5% accuracy</li>
+                <li>Reduced manual effort by 30%</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Skin Lesion Classification</h3>
+            <ul>
+                <li>Deep learning model (97.3%)</li>
+                <li>ML vs DL comparison</li>
+                <li>Desktop application</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section class="fade-in">
+    <h2>Achievements</h2>
+    <div class="card">
+        <ul>
+            <li>Gold Badge in AI/ML (Great Learning)</li>
+            <li>Guest Speaker – Christ University (2026)</li>
+            <li>1st Rank in University Exams</li>
+            <li>Texas Instruments IICDC Quarterfinalist</li>
+        </ul>
+    </div>
+</section>
+
+<section class="fade-in">
+    <h2>Contact</h2>
+    <div class="card">
+        <p><a href="https://www.linkedin.com/in/b-priyankaa-066489154/">LinkedIn</a></p>
+        <p><a href="https://github.com/Priyankaa-B98">GitHub</a></p>
+    </div>
+</section>
+
+<footer class="fade-in">
+    <p>© 2026 B Priyankaa</p>
+</footer>
+
+<!-- ANIMATION SCRIPT -->
+<script>
+const elements = document.querySelectorAll('.fade-in');
+
+function revealElements() {
+    elements.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+            el.classList.add('visible');
+        }
+    });
+}
+
+// Run on load
+window.addEventListener('load', revealElements);
+
+// Run on scroll
+window.addEventListener('scroll', revealElements);
+</script>
+
+</body>
+</html>
