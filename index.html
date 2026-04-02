@@ -55,7 +55,6 @@ h2 {
 
 a { color: #3b82f6; }
 
-/* CHATBOT */
 #chatbot {
     position: fixed;
     bottom: 20px;
@@ -66,6 +65,8 @@ a { color: #3b82f6; }
     overflow: hidden;
     font-size: 14px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+
+    display: none; /* 🔥 ADD THIS LINE */
 }
 
 #chat-header {
@@ -119,7 +120,14 @@ a { color: #3b82f6; }
     padding: 12px 15px;
     font-size: 18px;
     cursor: pointer;
-    display: none;
+    display: block; /* 🔥 IMPORTANT */
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 .user { color: #38bdf8; }
 .bot { color: #e2e8f0; }
@@ -506,8 +514,16 @@ function closeChat() {
 }
 
 function openChat() {
-    document.getElementById("chatbot").style.display = "block";
+    const chatbot = document.getElementById("chatbot");
+    const chatBody = document.getElementById("chat-body");
+    const chatInput = document.getElementById("chat-input");
+
+    chatbot.style.display = "block";
     document.getElementById("chat-open-btn").style.display = "none";
+
+    // 🔥 Reset state when reopening
+    chatBody.style.display = "block";
+    chatInput.style.display = "block";
 }
 </script>
 
